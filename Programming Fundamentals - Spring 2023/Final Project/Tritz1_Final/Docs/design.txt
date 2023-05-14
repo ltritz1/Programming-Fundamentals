@@ -1,0 +1,89 @@
+Problem Statement:
+	A program is to be written where any number of names can 
+  be input and have the program randomly choose a 
+  name and an icebreaker question. Ten questions are needed. 
+  The output should be the name and the icebreaker question. 
+
+
+Nouns and Verbs:
+	nouns: names, 10 icebreaker questions
+
+	verbs: input, random, output
+
+
+Defining Diagram:
+	Inputs: any number of names
+    
+  Processing:
+    prompt user for names  
+    push names into array
+    randomly choose a name
+    randomly choose a question
+    display name
+    display question
+  
+  Outputs:
+    name
+    icebreaker question
+
+
+
+Pseudocode:
+
+BreakTheIce
+    While namelooping doesn't equal false
+      prompt for names until nameInput equals blank
+      and push names to StudentNames array
+    get randomIndexValue to 
+      choose the LuckyStudent name in the array
+    get randomQuestionIndex to 
+      choose the question 
+        if randomQuestionIndex = 1 then 
+          question = "What is your favorite school subject?"
+        else if randomQuestionIndex = 2 then
+          question = "Who's your favorite actor/actress?"
+        else if randomQuestionIndex = 3 then
+          question = "What is your favorite book?"
+        else if randomQuestionIndex = 4 then
+          question = "Where did you grow up?"
+        else if randomQuestionIndex = 5 then
+          question = "What is your favorite color?"
+        else if randomQuestionIndex= 6 then
+          question = "Where was your favorite vacation?"
+        else if randomQuestionIndex = 7 then
+          question = "Snow or sun?"
+        else if randomQuestionIndex = 8 then
+          question = "What is your favorite movie?"
+        else if randomQuestionIndex = 9 then
+          question = "Dogs or cats?"
+        else if randomQuestionIndex = 10 then
+          question = "How many pets do you have?";
+        endif
+    document write LuckyStudent
+    document write question
+
+
+
+Test Plans:
+
+Variables: nameInput
+
+  Test Case 1:
+    Input Values:a, b, c, d, e, f
+    Expected Results: c
+          What is your favorite movie?
+    Actual Reulsts: d
+        Where was your favorite vacation? 
+    
+  Test Case 2: 
+    Input Values:Bucky, Clint, Phil, Steve, Bruce, Tony
+    Expected Results: Tony
+                  Snow or sun?
+    Actual Reulsts:  Bucky
+        Who's your favorite actor/actress? 
+    
+  Test Case 3:
+    Input Values: Chad, Dan, Zac, Charlie
+    Expected Results:Zac, What is your favorite book?
+    Actual Reulsts:  Chad
+          Where was your favorite vacation? 
