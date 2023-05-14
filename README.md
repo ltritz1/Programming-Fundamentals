@@ -1,0 +1,1 @@
+This is a program to choose a random name and question for an ice breaker session of a meeting. It was made as a final for a Programming Fundamentals class in the Data Analytics Specialist Program at CVTC.
