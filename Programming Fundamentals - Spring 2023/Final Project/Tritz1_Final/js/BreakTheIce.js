@@ -1,57 +1,78 @@
-/* This function chooses a name and question randomly to start an ice breaker conversation for classes and meetings*/
-function BreakTheIce() {
+function breakTheIce() {
+  // Function to get student names
+  function getStudentNames() {
+    var studentNames = [];
+    var nameInput = "";
+    var nameLooping = true;
 
-/*Variable declarations*/
-  var StudentNames = [];
-  var nameLooping = true;
-  var nameInput = "";
-  var LuckyStudent;
-  var randomIndexValue;
-  var randomQuestionIndex;
-  var question;
-
-/* While loop that requests names of class or meeting for random selection*/
-  while(nameLooping){
-    nameInput = prompt("Enter the student's name or leave blank to stop.");
-    if(nameInput === ""){
+    while (nameLooping) {
+      nameInput = prompt("Enter the student's name or leave blank to stop.");
+      if (nameInput === "") {
         nameLooping = false;
-    }else{
-        StudentNames.push(nameInput);
+      } else {
+        studentNames.push(nameInput);
+      }
     }
-  } 
-  
-  /*Random value chosen to pull the name from the StudentNames array*/
-  randomIndexValue = Math.floor(Math.random()*StudentNames.length);  /*https://www.w3schools.com/js/js_random.asp*/ 
-    LuckyStudent = StudentNames[randomIndexValue];
-  
-  /*Random value chosen to pull the question to be given*/
-  randomQuestionIndex = Math.floor(Math.random() * 10) + 1;    /*https://www.w3schools.com/js/js_random.asp*/  
-    if(randomQuestionIndex == 1) {
-      question = "What is your favorite school subject?";
-    }else if(randomQuestionIndex == 2) {
-      question = "Who's your favorite actor/actress?";
-    }else if(randomQuestionIndex == 3) {
-      question = "What is your favorite book?";
-    }else if(randomQuestionIndex == 4) {
-      question = "Where did you grow up?";
-    }else if(randomQuestionIndex == 5) {
-      question = "What is your favorite color?";
-    }else if(randomQuestionIndex == 6) {
-      question = "Where was your favorite vacation?";
-    }else if(randomQuestionIndex == 7) {
-      question = "Snow or sun?";
-    }else if(randomQuestionIndex == 8) {
-      question = "What is your favorite movie?";
-    }else if(randomQuestionIndex == 9) {
-      question = "Dogs or cats?";
-    }else if(randomQuestionIndex == 10) {
-      question = "How many pets do you have?";
-    }
-  
-  /*Output*/
-  document.write((LuckyStudent) + "<br>");
-  document.write(question);
-  
+    return studentNames;
   }
 
-BreakTheIce();
+  // Function to choose a random student from the given names
+  function chooseLuckyStudent(studentNames) {
+    var randomIndexValue = Math.floor(Math.random() * studentNames.length);
+    return studentNames[randomIndexValue];
+  }
+
+  // Function to generate a random icebreaker question
+  function generateQuestion() {
+    var randomQuestionIndex = Math.floor(Math.random() * 10) + 1;
+    var question;
+
+    switch (randomQuestionIndex) {
+      case 1:
+        question = "What is your favorite school subject?";
+        break;
+      case 2:
+        question = "Who's your favorite actor/actress?";
+        break;
+      case 3:
+        question = "What is your favorite book?";
+        break;
+      case 4:
+        question = "Where did you grow up?";
+        break;
+      case 5:
+        question = "What is your favorite color?";
+        break;
+      case 6:
+        question = "Where was your favorite vacation?";
+        break;
+      case 7:
+        question = "Snow or sun?";
+        break;
+      case 8:
+        question = "What is your favorite movie?";
+        break;
+      case 9:
+        question = "Dogs or cats?";
+        break;
+      case 10:
+        question = "How many pets do you have?";
+        break;
+    }
+    return question;
+  }
+
+  //Function to display output
+  function output() {
+    var namedStudent = getStudentNames();
+    var luckyStudent = chooseLuckyStudent(namedStudent);
+    var question = generateQuestion();
+
+    document.write(luckyStudent + "<br>");
+    document.write(question);
+  }
+  output();
+}
+
+// Calling the main function
+breakTheIce();

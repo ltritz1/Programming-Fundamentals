@@ -31,11 +31,16 @@ Defining Diagram:
 Pseudocode:
 
 BreakTheIce
+  function getStudentNames
     While namelooping doesn't equal false
       prompt for names until nameInput equals blank
       and push names to StudentNames array
+
+  function chooseLuckyStudent
     get randomIndexValue to 
       choose the LuckyStudent name in the array
+
+  function generateQuestion
     get randomQuestionIndex to 
       choose the question 
         if randomQuestionIndex = 1 then 
@@ -59,6 +64,8 @@ BreakTheIce
         else if randomQuestionIndex = 10 then
           question = "How many pets do you have?";
         endif
+
+  function breakTheIce
     document write LuckyStudent
     document write question
 
