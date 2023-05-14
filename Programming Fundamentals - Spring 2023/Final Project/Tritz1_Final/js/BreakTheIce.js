@@ -5,7 +5,6 @@ function BreakTheIce() {
   var StudentNames = [];
   var nameLooping = true;
   var nameInput = "";
-  var count = 0;
   var LuckyStudent;
   var randomIndexValue;
   var randomQuestionIndex;
