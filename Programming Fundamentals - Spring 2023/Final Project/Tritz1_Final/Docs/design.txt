@@ -65,10 +65,12 @@ BreakTheIce
           question = "How many pets do you have?";
         endif
 
-  function breakTheIce
+  function output
+    bring in name and question
     document write LuckyStudent
     document write question
 
+Call breakTheIce
 
 
 Test Plans:
