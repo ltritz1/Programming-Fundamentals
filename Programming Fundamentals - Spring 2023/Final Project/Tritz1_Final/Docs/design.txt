@@ -91,6 +91,16 @@ Variables: nameInput
     
   Test Case 3:
     Input Values: Chad, Dan, Zac, Charlie
-    Expected Results:Zac, What is your favorite book?
-    Actual Reulsts:  Chad
+    Expected Results: Zac 
+          What is your favorite book?
+    Actual Results:  Chad
           Where was your favorite vacation? 
+          
+  Test Case 4:
+    Input Values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+    Expected Results:   5
+                    Snow or sun?
+    Actual Results:   2
+          What is your favorite school subject?
+
+***Actual results vary as names and questions are randomly chosen.          
