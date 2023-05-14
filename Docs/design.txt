@@ -1,0 +1,37 @@
+Problem Statement:
+	A program is to be written where any number of names can 
+  be input and have the program randomly choose a 
+  name and trivia question. Ten questions are needed. 
+  The output should be the name and the trivia question. 
+
+
+Nouns and Verbs:
+	nouns: names, 10 trivia questions
+
+	verbs: input, random, output
+
+
+Defining Diagram:
+	Inputs: any number of names
+    
+  Processing:
+    prompt user for names  
+    push names into array
+    randomly choose a name
+    randomly choose a question
+    display name
+    display question
+  
+  Outputs:
+    name
+    trivia question
+
+
+
+Pseudocode:
+
+
+
+
+
+Test Plans:
